@@ -48,7 +48,7 @@ Agent Skills are specialized knowledge modules that AI assistants can load to pe
 
 1. Copy the `salvo-skills` folder to your project:
    ```bash
-   cp -r salvo-skills .github/skills/
+   cp -r salvo-skills/skills .github/skills/
    ```
 
 2. Enable agent skills in VS Code settings:
@@ -64,22 +64,10 @@ Agent Skills are specialized knowledge modules that AI assistants can load to pe
 
 1. Copy the skills to your project:
    ```bash
-   cp -r salvo-skills .claude/skills/
+   cp -r salvo-skills/skills .claude/skills/
    ```
 
 2. Skills will be automatically loaded when working with Salvo code.
-
-### For Personal Use
-
-Copy to your home directory for use across all projects:
-
-```bash
-# GitHub Copilot
-cp -r salvo-skills ~/.github/skills/
-
-# Claude Code
-cp -r salvo-skills ~/.claude/skills/
-```
 
 ## 💡 Usage Examples
 
