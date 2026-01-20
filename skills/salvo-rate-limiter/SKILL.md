@@ -11,7 +11,7 @@ This skill helps implement rate limiting in Salvo applications to protect agains
 
 ```toml
 [dependencies]
-salvo = { version = "0.76", features = ["rate-limiter"] }
+salvo = { version = "1.88.1", features = ["rate-limiter"] }
 ```
 
 ## Basic Rate Limiting

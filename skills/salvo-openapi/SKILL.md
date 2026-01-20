@@ -20,7 +20,7 @@ Add dependencies:
 
 ```toml
 [dependencies]
-salvo = { version = "0.76", features = ["oapi"] }
+salvo = { version = "1.88.1", features = ["oapi"] }
 serde = { version = "1", features = ["derive"] }
 ```
 

@@ -15,7 +15,7 @@ CORS (Cross-Origin Resource Sharing) is a browser security feature that restrict
 
 ```toml
 [dependencies]
-salvo = { version = "0.76", features = ["cors"] }
+salvo = { version = "1.88.1", features = ["cors"] }
 ```
 
 ## Basic CORS Configuration

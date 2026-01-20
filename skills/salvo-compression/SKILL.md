@@ -19,7 +19,7 @@ HTTP compression reduces response size by compressing content before sending. Th
 
 ```toml
 [dependencies]
-salvo = { version = "0.76", features = ["compression"] }
+salvo = { version = "1.88.1", features = ["compression"] }
 ```
 
 ## Basic Usage

@@ -20,7 +20,7 @@ Timeout is built into Salvo core:
 
 ```toml
 [dependencies]
-salvo = "0.76"
+salvo = "1.88.1"
 ```
 
 ## Basic Timeout

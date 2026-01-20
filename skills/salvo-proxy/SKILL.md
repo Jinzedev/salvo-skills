@@ -20,7 +20,7 @@ A reverse proxy accepts client requests and forwards them to backend servers. Be
 
 ```toml
 [dependencies]
-salvo = { version = "0.76", features = ["proxy"] }
+salvo = { version = "1.88.1", features = ["proxy"] }
 ```
 
 ## Basic Proxy
