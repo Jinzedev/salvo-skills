@@ -21,7 +21,7 @@ AI agent skills for the [Salvo](https://salvo.rs) web framework. These skills he
 
 Agent Skills are specialized knowledge modules that AI assistants can load to perform specific tasks. They follow the [Agent Skills](https://agentskills.io) open standard and work with tools like GitHub Copilot, Claude Code, and other AI coding assistants.
 
-## Available Skills (17 Total)
+## Available Skills (27 Total)
 
 ### Core Framework
 
@@ -38,7 +38,8 @@ Agent Skills are specialized knowledge modules that AI assistants can load to pe
 |-------|-------------|
 | [salvo-data-extraction](./skills/salvo-data-extraction) | Extract and validate data from requests (JSON, forms, query params, path params) |
 | [salvo-database](./skills/salvo-database) | Integrate databases using SQLx, Diesel, SeaORM, or other ORMs |
-| [salvo-file-handling](./skills/salvo-file-handling) | Handle file uploads, downloads, and serve static files |
+| [salvo-file-handling](./skills/salvo-file-handling) | Handle file uploads, downloads, and multipart forms |
+| [salvo-static-files](./skills/salvo-static-files) | Serve static files, directories, and embedded assets |
 | [salvo-caching](./skills/salvo-caching) | Implement caching strategies for improved performance |
 
 ### Security
@@ -46,18 +47,37 @@ Agent Skills are specialized knowledge modules that AI assistants can load to pe
 | Skill | Description |
 |-------|-------------|
 | [salvo-auth](./skills/salvo-auth) | Implement authentication and authorization (JWT, Basic Auth, sessions) |
+| [salvo-session](./skills/salvo-session) | Manage user sessions for login, shopping carts, and preferences |
+| [salvo-csrf](./skills/salvo-csrf) | Protect against Cross-Site Request Forgery attacks |
 | [salvo-cors](./skills/salvo-cors) | Configure CORS and security headers for browser access |
 | [salvo-rate-limiter](./skills/salvo-rate-limiter) | Implement rate limiting to protect APIs from abuse |
 | [salvo-tls-acme](./skills/salvo-tls-acme) | Configure TLS/HTTPS with automatic certificate management |
+
+### Real-time Communication
+
+| Skill | Description |
+|-------|-------------|
+| [salvo-realtime](./skills/salvo-realtime) | Overview of real-time features with WebSocket and SSE |
+| [salvo-websocket](./skills/salvo-websocket) | Full-duplex bidirectional WebSocket communication |
+| [salvo-sse](./skills/salvo-sse) | Server-Sent Events for live notifications and feeds |
+
+### Performance & Operations
+
+| Skill | Description |
+|-------|-------------|
+| [salvo-compression](./skills/salvo-compression) | Compress HTTP responses using gzip, brotli, or zstd |
+| [salvo-timeout](./skills/salvo-timeout) | Configure request timeouts to prevent slow requests |
+| [salvo-concurrency-limiter](./skills/salvo-concurrency-limiter) | Limit concurrent requests to protect resources |
+| [salvo-graceful-shutdown](./skills/salvo-graceful-shutdown) | Handle in-flight requests before server shutdown |
+| [salvo-logging](./skills/salvo-logging) | Implement request logging, tracing, and observability |
 
 ### Advanced Features
 
 | Skill | Description |
 |-------|-------------|
 | [salvo-openapi](./skills/salvo-openapi) | Generate OpenAPI documentation automatically from handlers |
-| [salvo-realtime](./skills/salvo-realtime) | Implement WebSocket and Server-Sent Events for real-time features |
-| [salvo-compression](./skills/salvo-compression) | Compress HTTP responses using gzip, brotli, or zstd |
 | [salvo-proxy](./skills/salvo-proxy) | Implement reverse proxy for load balancing and API gateways |
+| [salvo-flash](./skills/salvo-flash) | Flash messages for one-time notifications across redirects |
 | [salvo-testing](./skills/salvo-testing) | Write unit and integration tests using TestClient |
 
 ## Quick Start
@@ -99,6 +119,9 @@ Once installed, you can ask your AI assistant questions like:
 - "Configure CORS for my API"
 - "Add rate limiting to protect my endpoints"
 - "Set up HTTPS with Let's Encrypt"
+- "Implement graceful shutdown for my server"
+- "Add CSRF protection to my forms"
+- "Create a file upload endpoint with validation"
 
 The AI will use these skills to provide accurate, framework-specific guidance.
 
@@ -133,12 +156,26 @@ The AI will use these skills to provide accurate, framework-specific guidance.
 - Session-based auth with `SessionHandler`
 - Role-based access control (RBAC)
 - CORS configuration
+- CSRF protection
 - Rate limiting
+
+### Real-time Communication
+- WebSocket with `WebSocketUpgrade`
+- SSE with `SseEvent` and `SseKeepAlive`
+- Broadcasting patterns
+- Connection management
 
 ### Performance
 - Response compression (gzip, brotli, zstd)
 - Caching strategies
 - HTTP/2 and HTTP/3 support
+- Concurrency limiting
+- Request timeouts
+
+### Operations
+- Graceful shutdown with `ServerHandle`
+- Logging with tracing
+- Request timing and metrics
 
 ### OpenAPI
 - `#[endpoint]` macro for documentation
